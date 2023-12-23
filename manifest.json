@@ -1,0 +1,39 @@
+{
+	"manifest_version": 2,
+	"browser_specific_settings": {
+		"gecko": {
+		  "id": "gopanic@jaduastudios.com",
+		  "strict_min_version": "101.0"
+		}
+	  },
+
+  "name": "Go Panic",
+  "version": "0.0.1",
+  "description": "A simple panic button addon built for the Jadua Go Browser",
+   "icons": {
+    "16": "resources/icon16.png",
+    "32": "resources/icon32.png",
+    "48": "resources/icon48.png",
+    "128": "resources/icon128.png"
+  },
+  
+  "permissions": [
+		"tabs",
+		"storage"
+	],
+	
+  "commands": {
+	  "togglePanicButton": {
+		"suggested_key": {
+		  "default": "F8"
+		},
+		"description": "Activate Panic Button"
+	  }
+	},
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+
+}
