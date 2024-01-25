@@ -13,10 +13,10 @@ jobs:
     - uses: actions/checkout@master
     - name: Package
       run: |
-        zip -9 -r -q ./release.zip ./*
+        zip -9 -r -q ./release.xpi ./*
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
         tag: 'v${{ github.event.inputs.version }}'
-        artifacts: "release.zip"
+        artifacts: "release.xpi"
         token: ${{ secrets.GITHUB_TOKEN }}
